@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		a[target] {
+			background-color: gray;
+		}
+
+		/*a[target=_blank] {
+			background-color: red; 
+		}*/			
+
+		p[lang|=en] {
+			background-color: gray;
+		}
+
+		div[class*=test] {
+			background: #ffff00;
+		}
+
+		img {
+			width: 30%;
+			height: 30%;
+		}	
+
+		img[title~=aleman] {
+			border: 5px solid red; 
+		}
+
+		/*img[title~=ruso] {
+			border: 5px solid blue; 
+		}*/
+
+	</style>
+
+</head>
+
+<body>
+
+	<p>Los links con un target van a quedar en gris</p>
+
+	<a href="http://www.w3schools.com">w3schools.com</a>
+	<a href="http://www.facebook.com" target="_blank">facebook.com</a>
+	<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+	<a href="http://www.youtube.com" target="_blank">youtube.com</a>
+
+	<p>Se pone en gris todo lo que empieze con en</p>
+	<p lang="en">Hello!</p>
+	<p lang="en-us">Hi!</p>
+	<p lang="en-gb">Ello!</p>
+	<p lang="us">Hi!</p>
+	<p lang="no">Hey!</p>
+
+	<p>Seleccionar solo la clase test</p>
+	<div class="first_test">El primer div.</div>
+	<div class="second">El segundo div.</div>
+	<div class="test">Tercer div.</div>
+	<p class="test">Esto es un parrafo.</p>
+
+	<p>¿Cúal es el tanque alemán de los siguientes carros?</p>
+
+	<img src="Imagenes/is7.jpg" title="tanque pesado ruso">
+	<img src="Imagenes/tiger.jpg" title="tanque pesado aleman">
+	<img src="Imagenes/t3485.jpg" title="tanque medio ruso">
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+/*h1, div, p {
+	background: #ff8000;
+}*/
+
+div {
+	width: 400px; /*Porcentajes y pixeles*/
+	/*height: 300px;*/ /*Se recomienda que crezca respecto al contenido*/
+	background: #ff8000;
+	/*Margen externo: altopx anchopx*/
+	margin: 20px 50px;
+	/*Margen interno*/
+	padding: 30px; /*Enfasis en cuidar el tamaño real de las formas que se tienen*/
+	/*Sumar magin o padding a la altura y anchura deseados*/
+	border: 10px solid #000000;
+	/*Por defecto ya son elementos de bloque*/
+	display: inline-block; /*Se hace que funcionen como en linea*/
+}

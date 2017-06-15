@@ -1,0 +1,36 @@
+div {
+	width: 100px;
+	height: 100px;
+	background: #4A88F4;
+	font-size: 30px;
+	/*float: left;*/ /*Se acomodan una junto a otra*/
+	float: left;
+}
+
+/*.cajaPadre {
+	width: 500px;
+	height: 500px;
+	background: #000000;
+	position: relative; //El elemento queda dentro del elemento padre y el absolute cuenta desde dentro del padre
+}*/
+
+.caja {
+	/*position: static;Es el posicionamiento por defecto*/
+	/*position: relative;*/ /*Modifica desde su posicion actual*/
+	/*position: absolute;*/ /*Se modifica desde el inicio de la pantalla*/
+	/*position: fixed;*/ /*No se mueve a pesar del scroll, se ubica desde el inicio de la pantalla*/
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+}
+
+img {
+	width: 400px;
+	height: 220px;
+	float: left;
+}
+
+.clear { /*Limpia el float*/
+	clear: both;
+}

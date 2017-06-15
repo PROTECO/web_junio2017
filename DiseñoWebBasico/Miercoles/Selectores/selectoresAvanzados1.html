@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<!--Los elementos deben ser hijos directos del elemento definido
+es diferente de un selector descendente-->
+
+<head>
+<meta charset="utf-8">
+	<title>Selectores avanzados</title>
+
+	<style>
+
+    span:nth-child(2) {
+      background: red;
+    }
+
+    /*Usando una fórmula ( un + b ). Descripción: una representa un tamaño de ciclo, n es un contador (empieza en 0), y b es un valor de desplazamiento.
+    span:nth-child(3n+0) { 
+      background: red;
+    }*/
+  
+		div > h2 {
+			background-color: gray;
+		}
+
+		div > p {
+			background-color: yellow;
+		}
+
+		img {
+			width: 50%;
+			height: 50%;
+		}
+
+    div + p {
+      background-color: green; 
+    }
+  
+</style>
+
+<body>
+  <span>The first span.</span>
+  <span>The second span.</span>
+  <span>The third span.</span>
+  <span>The fourth span.</span>
+  <span>The fifth span.</span>
+  <span>The sixth span.</span>
+  <span>The seventh span.</span>
+  <span>The eight span.</span>
+  <span>The ninth span.</span>
+
+	<div>
+		<h2>Soy un tanque</h2>
+		<img src="Imagenes/Panzer Tank World War II.jpg">
+		<p>Peso total: 56 [Tn]</p>
+		<p>Velocidad máxima: 40 km/h en carretera</p>
+		<p>Armamento principal: Kampfwagenkanone 36L/56 de 88mm</p>
+	</div>
+
+	<div>
+		<a><p>No tengo estilo porque no soy hijo directo :(</p></a>
+	</div>
+
+  <div>
+    <h4>Soy un h4</h4>
+    <p>Soy un p</p>
+  </div>
+
+  <p>Hola soy verde</p>
+
+
+</body>
+</html>
