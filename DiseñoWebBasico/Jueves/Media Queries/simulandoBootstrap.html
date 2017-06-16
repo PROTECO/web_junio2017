@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Mi Bootstrap</title>
+</head>
+<body class="container-fluid">
+
+<style>
+
+.header {
+    background-color: #009688;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    margin: 0px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.info {
+  text-align: justify;
+}
+
+
+/* Para celulares: */
+@media only screen and (max-width: 768px) {
+    .col-3 {width: 100%;      padding: 15px;
+}
+    .col-6 {width: 100%;      padding: 15px;
+}
+}
+
+/* Para escritorio: */
+@media only screen and (min-width: 768px) {
+    .col-3 {width: 24%; float: left; padding: 5px;}
+    .col-6 {width: 74%; float: left; padding: 5px;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ciudad de México</h1>
+</div>
+
+<div>
+  <div class="col-3 menu">
+    <ul>
+    <li>Benito Juárez</li>
+    <li>Coyoacán</li>
+    <li>Miguel Hidalgo</li>
+    <li>Iztapalapa</li>
+    </ul>
+  </div>
+
+  <div class="col-6 info">
+  <h1>CD<b>MX</b></h1>
+  <p>Anteriormente conocida como Distrito Federal,nota 1 es una entidad federativa mexicana,16 17 18 considerada oficialmente la capital del país.19 Se encuentra en el valle de México, a una altitud media de 2240 metros. Tiene una superficie de 1495 kilómetros cuadrados, y se divide administrativamente en dieciséis demarcaciones territoriales o delegaciones. </p>
+  </div>
+</div>
+
+</body>
+</html>
