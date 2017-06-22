@@ -1,0 +1,34 @@
+html,body{
+	overflow-x: hidden
+	font-family: 'Dosis', sans-serif;
+	height: 100%
+
+}
+
+
+
+/*Estilos para el carousel*/
+
+header.carousel{
+	height: 100%
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner{
+	height: 100%;
+}
+
+header.carousel .fill{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover; 
+}
+footer{
+	margin: 50px 0;
+}
+.quitarEspacio{
+	margin-bottom: 0px;
+}
+

@@ -1,0 +1,6 @@
+.col-md-1,.col-md-4,.col-md-6,.col-xs-12,.col-md-8,.col-xs-6,.col-md-9,.col-md3,.col-md-push-3,.col-md-pull-9,.col-md-12,.col-xs-8,.col-md-6{
+	padding-top:10px;
+	padding-bottom: 10px;
+	background: rgba(86,61,124,.15);
+	border: 1px solid rgba(86,61,124,.2) 
+}

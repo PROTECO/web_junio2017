@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <style>
+    p{
+      text-align : justify;
+    }
+  </style>
+  <main>
+    <div class="navbar-fixed">
+      <nav role="navigation" class="green darken-2
+">
+        <!-- Dropdown Mobile-->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="https://twitter.com/kevinspacey" target="_blank">Twitter</a></li>
+          <li><a href="https://www.facebook.com/KevinSpacey" target="_blank">Facebook</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.kevinspacey.com/" target="_blank">Página Oficial</a></li>
+        </ul>
+        
+        <!-- Dropdown Desktop-->
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a href="https://twitter.com/kevinspacey" target="_blank">Twitter</a></li>
+          <li><a href="https://www.facebook.com/KevinSpacey" target="_blank">Facebook</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.kevinspacey.com/" target="_blank">Página Oficial</a></li>
+        </ul>
+
+        <!--Nav mobile-->
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo center">Logo</a>
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="index.html"  class="active">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Redes Sociales<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+          <!--Nav Desktop-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a class="white-text" href="index.html">Inicio</a></li>
+            <li><a class="white-text" href="contacto.html">Contacto</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Redes Sociales<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+    <!--Contenido-->
+    <div class="parallax-container">
+      <div class="parallax">
+      <img  class="img-responsive" src="img/tren.jpg">
+      </div>
+    </div>
+      <!--Esto va en medio de las dos imagenes con efecto parallax-->
+      <div class="section white">
+        <div class="row container">
+          <h2>Esto va en medio</h2>
+        </div>
+        
+        <div class="row container">
+          <h4>Otra texto</h4>
+        </div>
+      </div>
+        <div class="parallax-container">
+        <div class="parallax"><img src="img/leo.jpg">
+        </div>
+        </div>
+
+      <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="img/leo.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="img/tren.jpg"></a>
+  </div>
+
+      <!--Fin del contenido-->
+      <!--Formularios-->
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Nombre" id="first_name" type="text" class="validate">
+          <label for="first_name">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Apellido</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Deshabilitado</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Contraseña</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Correo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="Ese no es un correo válido" data-success="Bien!">Email</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <i class="material-icons">add</i>
+  <i class="material-icons">settings_bluetooth</i>
+  <i class="material-icons">videocam</i>
+  <i class="material-icons">launch</i>
+  <i class="material-icons">thumb_up</i>
+
+
+    <form action="#">
+    <p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Red</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Yellow</label>
+    </p>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test3"  />
+      <label for="test3">Green</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test4" disabled="disabled" />
+      <label for="test4">Brown</label>
+    </p>
+  </form>
+
+    <form action="#">
+    <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">Red</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test6" checked="checked" />
+      <label for="test6">Yellow</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Filled in</label>
+    </p>
+    <p>
+      <input type="checkbox" id="indeterminate-checkbox" />
+      <label for="indeterminate-checkbox">Indeterminate Style</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+      <label for="test7">Green</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test8" disabled="disabled" />
+      <label for="test8">Brown</label>
+    </p>
+  </form>
+
+    </main>
+    <footer class="page-footer blue lighten-3>
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".dropdown-button").dropdown();
+      $('.button-collapse').sideNav();
+    });
+  </script>
+  <script>
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      $('.carousel').carousel();
+    });
+  </script>
+  </html>

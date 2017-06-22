@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<title>Mi página personal</title>
+</head>
+<body>
+	<!--Inicia barra de navegación o Navbar-->
+	<nav class="navbar navbar-default navbar-inverse quitarEspacio">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo.png" alt="Este es mi logo"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li ><a href="index.html">Inicio<span class="sr-only">(current)</span></a></li>
+					<li ><a href="biografia.html">Biografía</a></li>
+					<li class="active"><a href="contacto.html">Contacto</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Redes sociales <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+							<li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+							<li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+							<li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+						</ul>
+					</li>
+				</ul>
+
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<!--Termina barra de navegación-->
+
+	<!--Contenido de la página de contacto-->
+	<div class="container">
+	<br>
+	<br>
+	<br>
+	<br>
+		<div class="row">
+			<div class="col-md-8">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.0417941404066!2d-99.1036396344578!3d19.323992636946127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce01f61d09f2eb%3A0xc6d6e6d199f95d34!2sSanta+Mar%C3%ADa+Tomatlan%2C+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses-419!2smx!4v1497992439485" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-4">
+				<h2>Contacto</h2>
+				<p><!--Aquí va el icono-->Zapata 15 <br> Iztapalapa <br> 09870</p>
+				<p><!--Aquí va el icono--><abbr title="Phone">P:</abbr>1234456789</p>
+				<p><!--Aquí va el icono--><abbr title="Email">E:</abbr><a href="mailto:jorgechavez.proteco@gmail.com"> jorgechavez.proteco@gmail.com</a></p>
+				<p><abbr title="Hours">H:</abbr>Horario 8:00 am- 12:00 am</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Envía un mensaje</h3>
+				<form>
+  <!--Espacio para el correo-->
+  <div class="form-group">
+    <label for="exampleInputEmail1">Correo</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo">
+  </div>
+  <!--Espacio para contraseña-->
+  <div class="form-group">
+    <label for="exampleInputPassword1">Contraseña</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+  </div>
+<!--El mensaje que queremos enviar-->
+  <div class="control group form-group">
+  <div class="controls"></div>
+    <label >Mensaje: </label>
+  <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Por favor ingresa un mensaje" maxlength="999" style="resize: none;">
+  	
+  </textarea>
+  </div>
+  
+  
+  <button type="submit" class="btn btn-info">Enviar</button>
+</form>
+			</div>
+		</div>
+	</div>
+	<!--Fin del contenido-->
+
+	<!--Comienza el footer-->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<center>
+					<p>Copyright &copy; 2017</p>
+				</center>	
+			</div>
+		</div>
+	</footer>
+	<!--Termina el footer-->
+</body>
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
