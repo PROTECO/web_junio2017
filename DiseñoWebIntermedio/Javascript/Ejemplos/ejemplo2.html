@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambiando Contenido de un documento</title>
+</head>
+<body>
+
+	<button id="cambiaText">Cambia el primer div</button>
+
+	<div id="primerdiv"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum earum quaerat porro quod accusantium sit et corporis ipsa velit ut, vero ex laudantium. Labore nihil rerum ullam dolore aliquid hic!</div>
+
+
+	<button id="concatenar"> Concatenar al segundo div</button>
+	<div id="segundodiv">El profesor es </div>
+
+	<button id="creador">Crear Texto</button>
+	<div id="tercerdiv"></div>
+
+	
+	<script>
+
+	document.getElementById("cambiaText").onclick=function(){
+		console.log("Algo2")
+		document.getElementById("primerdiv").innerHTML= "algo";
+		//alert(document.getElementById("primerdiv").innerHTML);
+		//Se comporta como un getter o como un setter
+
+	}
+	document.getElementById("concatenar").onclick=function(){
+		document.getElementById("segundodiv").innerHTML=document.getElementById("segundodiv").innerHTML + "chido!";
+	}
+	document.getElementById("creador").onclick=function(){
+		document.getElementById("tercerdiv").innerHTML="<h3>Hola Mundo</h3>"
+	}
+
+	//los eventos van todo en minuscula
+	</script>
+
+</body>
+</html>
