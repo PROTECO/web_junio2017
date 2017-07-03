@@ -1,0 +1,155 @@
+<p>{{nombreComponente}}</p>
+<!--<p>{{nombre}} , {{edad}}, {{var1}}, {{var2}}</p>-->
+
+<!--{{nombre}}-->
+
+
+<!--Clase 1
+<ul>
+	<li>{{empleado.nombre}}</li>
+	<li>{{empleado.edad}}</li>
+	<li>{{empleado.puesto}}</li>
+	<li>{{empleado.contratado}}</li>
+</ul>
+
+<ul>
+	<li>{{trabajadores[0].nombre}}</li>
+	<li>{{trabajadores[0].edad}}</li>
+	<li>{{trabajadores[0].puesto}}</li>
+	<li>{{trabajadores[0].contratado}}</li>
+</ul>
+-->
+
+<!--Clase 2-->
+
+<!--If
+<div *ngIf="empleado.bono==true">
+	<button (click)="conBono(false)">Con bono</button>
+	<ul>
+		<li>{{empleado.nombre}}</li>
+		<li>{{empleado.edad}}</li>
+		<li>{{empleado.puesto}}</li>
+		<li>{{empleado.bono}}</li>
+	</ul>
+</div>
+
+<div *ngIf="trabajadores[0].bono==false">
+	<button (click)="conBono(true)">Sin bono</button>
+	<ul>
+		<li>{{trabajadores[0].nombre}}</li>
+		<li>{{trabajadores[0].edad}}</li>
+		<li>{{trabajadores[0].puesto}}</li>
+		<li>{{trabajadores[0].bono}}</li>
+	</ul>
+</div>
+-->
+
+<!--For
+<h4>Empleados</h4>
+<div>
+	<ul>
+		<li *ngFor="let item of trabajadores">
+			<ul>
+        <li>{{item.nombre}}</li>
+        <li>{{item.edad}}</li>
+        <li>{{item.puesto}}</li>
+        <li *ngIf="item.bono==true">Con bono</li>
+				<li *ngIf="item.bono==false">Sin bono</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+<div>
+  <ul>
+    <li *ngFor="let item of trabajadores; let i = index">
+      <ul>
+        <li>{{i+1}}</li>
+        <li>{{item.nombre}}</li>
+        <li>{{item.edad}}</li>
+        <li>{{item.puesto}}</li>
+        <li *ngIf="item.bono==true">Con bono</li>
+        <li *ngIf="item.bono==false">Sin bono</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+-->
+
+<!--Switch
+
+<div>
+  <ul>
+    <li *ngFor="let item of trabajadores; let i = index">
+      <ul [ngSwitch]=item.color>
+        <li>{{i+1}}</li>
+        <li>{{item.nombre}}</li>
+        <li>{{item.edad}}</li>
+        <li>{{item.puesto}}</li>
+
+        <li *ngIf="item.bono==true">Con bono</li>
+        <li *ngIf="item.bono==false">Sin bono</li>
+
+        <li *ngSwitchCase="'red'" [ngStyle]="{
+          'background': item.color,
+          'color': 'white'
+        }">Soy rojo</li>
+
+        <li *ngSwitchCase="'blue'" [ngStyle]="{
+          'background': item.color,
+          'color': 'white'
+        }">Soy azul</li>
+
+        <li *ngSwitchCase="'green'" [ngStyle]="{
+          'background': item.color,
+          'color': 'white'
+        }">Soy verde</li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
+-->
+
+
+<!--Two ways data binding-->
+<!--
+<h3>Selector de colores</h3>
+<button (click)="getColorSeleccionado()">Imprime color</button> 
+<br>
+<input type="text" [(ngModel)]="colorSeleccionado">
+
+<p 
+    [style.border] = "colorSeleccionado == 'red' ? '5px solid black' : '0px solid black'"
+    [class.fondoAzul] = "colorSeleccionado == 'blue'"
+>
+
+<p 
+    [style.border] = "colorSeleccionado == 'red' ? '5px solid black' : '0px solid black'"
+    [ngClass] = "{
+      fondoAzul:colorSeleccionado == 'blue',
+      fondoVerde:colorSeleccionado == 'green'
+    }"
+>
+
+
+<p 
+    [style.border] = "colorSeleccionado == 'red' ? '5px solid black' : '0px solid black'"
+    [ngClass] = "['fondoAzul']"
+>
+
+
+
+{{colorSeleccionado}}</p>
+<div [ngStyle]="{
+  'background' : colorSeleccionado,
+  'color' : 'white',
+  'width' : '200px',
+  'height' : '200px'
+}"></div>
+
+-->
+
+<!--Interpolación se le llama  a las llaves y lo que hace es bindear un atributo del componente e imprimir el dato-->

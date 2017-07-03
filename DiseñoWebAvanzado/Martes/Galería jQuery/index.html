@@ -1,0 +1,113 @@
+<!Doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div class="row container">
+      
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            
+            <!--Encabezado -->
+            <div class="panel-heading">
+              <h3>Nuestras Startups</h3>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="panel-body">
+              <ul class="list-inline" id="menu-galeria">
+                <li>
+                  <img src="img/imagen1_sm.jpg" alt="imagen1">
+                </li>
+                <li>
+                  <img src="img/imagen2_sm.jpg" alt="imagen2">
+                </li>
+                <li>
+                  <img src="img/imagen3_sm.jpg" alt="imagen3">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Aqui termina la galeria-->
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3>Generador de inputs</h3>  
+            </div>
+
+            <div class="panel-body">
+              
+              <div class="form-group">
+                <label for="">Escribe el tipo de input</label>
+                <input type="text" class="form-control" id="tipo-input">
+              </div>
+
+              <button class="btn btn-default" id="generar-btn">Generar</button>
+
+            </div>
+
+            <div class="panel-footer">
+              <h5>Inputs generados:</h5>
+              <div class="generados">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <h3>Aquí van a aparecer las imágenes de la galería:</h3>
+          <div class="galeria-container">
+            <span class="glyphicon glyphicon-remove tache"></span>
+            <img class="img-responsive" src="" alt="" id="imagen-principal">
+          </div>
+        </div>
+      </div>
+
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+
+        <script>
+        //atrapa los lanzadores de eventos
+        //ready notifica que el documento ya es seguro de modificar
+          $(document).on("ready", principal);
+
+          function principal(){
+          	//$('body').css("background","red");
+            //$('.generados').text("Hola jQuery");
+            //$('.generados').html("<h1>Hola jQuery</h1>");
+            $('#menu-galeria li img').on("click", mostrarImagen);
+            $('.tache').on("click", ocultarImagen);
+            $('#generar-btn').on("click", generarInput);
+
+
+          }
+          //Usar debugger de chrome
+          function mostrarImagen(){
+            var nombre = $(this).attr('alt');
+            var direccion = 'img/' + nombre + '.jpg';
+            $('#imagen-principal').attr('src', direccion);
+            //$('.galeria-container').show();
+            $('.galeria-container').show(1000);
+          }
+
+          function ocultarImagen(){
+            $('.galeria-container').hide(1000);
+          }
+
+          function generarInput(){
+            var tipo = $('#tipo-input').val();
+            //Crear el input + reemplazar el type por lo que el usuario escribio
+            var nuevoElemento = $('<input type="' + tipo + '">');
+            //Insertarlo al DOM
+            $('.generados').append(nuevoElemento);
+            //Ir a http://www.w3schools.com/tags/tag_input.asp para ver tipos de inputs
+          }
+        </script>
+    </body>
+</html>

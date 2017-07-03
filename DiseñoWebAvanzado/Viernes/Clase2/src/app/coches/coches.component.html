@@ -1,0 +1,113 @@
+<h2>Formulario en angular</h2>
+<style>
+  form{
+    width: 200px;
+  }
+
+  input[type=text], span {
+    width: 100%;
+    display: block;
+  }
+
+  div{
+    float: left;
+  }
+
+  .listado{
+    margin-left: 30px;
+  }
+</style>
+<div>
+  <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
+    <p>
+      <label>Nombre</label>
+      <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
+      <span *ngIf="nombre.touched && !nombre.valid">El nombre del coche no uede estar vacío!!</span>
+    </p>
+    <p>
+      <label>Color</label>
+      <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required pattern="[a-zA-Z#]+">
+      <span *ngIf="color.touched && !color.valid">El color del coche debe ser con letras!!</span>
+    </p>
+    <p>
+      <label>Modelo</label>
+      <input type="text"name="modelo" #modelo="ngModel" [(ngModel)]="coche.modelo" required pattern="[0-9]+">
+      <span *ngIf="modelo.touched && !modelo.valid">El modelo del coche debe ser numérico!!</span>
+    </p>
+    <input type="submit" value="guardar" [disabled]="!formCoche.form.valid">
+  </form>
+</div>
+
+<!--
+<div class="listado">
+  <h4>Listado de coches</h4>
+  <ul>
+    <li *ngFor="let coche of coches">
+      {{coche.nombre}}-{{coche.color}}-{{coche.modelo}}
+    </li>
+  </ul>
+</div>
+-->
+
+<!--Clase 5
+<div class="listado">
+  <h4>Listado de articulos</h4>
+  <ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos">
+      {{articulo.id}} - {{articulo.title}}
+    </li>
+  </ul>
+  <span *ngIf="!articulos">Cargando listado..</span>
+</div>-->
+
+<!--Bitso best
+<div class="listado">
+  <h4>Listado de Bitcoins</h4>
+  <ul *ngIf="articulos">
+    <li>BestBid - {{articulos.payload.bids[0].price}}</li>
+    <li>BestAsk - {{articulos.payload.asks[0].price}}</li>
+  </ul>
+  <span *ngIf="!articulos">Cargando top of book..</span>
+</div>-->
+
+<!--Bitso full depth
+<div class="listado">
+  <h4>Listado de Bitcoins</h4>
+  <ul *ngIf="full">
+    <li> Bids
+      <ul>
+        <li *ngFor="let item of full.payload.bids; let i = index">
+          {{i}} - {{item.price}} - {{item.amount}}
+        </li>
+      </ul>
+    </li>
+    <li>Asks
+      <ul>
+        <li *ngFor="let item of full.payload.asks; let i = index">
+          {{i}} - {{item.price}} - {{item.amount}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <span *ngIf="!full">Cargando full depth..</span>
+</div>-->
+
+<!--Bitso best-->
+<div class="listado">
+  <h4>Listado de Bitcoins</h4>
+  <ul *ngIf="best">
+    <li>Bitcoin:
+      <ul>
+        <li>BestBid: {{best.payload[0].bid}} </li>
+        <li>BestAsk: {{best.payload[0].ask}}</li>
+      </ul>
+    </li>
+    <li>Eth:
+      <ul>
+        <li>BestBid: {{best.payload[1].bid}} </li>
+        <li>BestAsk: {{best.payload[1].ask}}</li>
+      </ul>
+    </li>
+  </ul>
+  <span *ngIf="!best">Cargando full depth..</span>
+</div>

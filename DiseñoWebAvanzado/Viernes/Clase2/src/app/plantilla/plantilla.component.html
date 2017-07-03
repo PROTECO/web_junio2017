@@ -1,0 +1,35 @@
+<h1>plantilla</h1>
+
+<!--If esle clásico
+<div *ngIf="administrador">
+  <b style="background:yellow;">Eres admin</b>
+</div>
+
+<div *ngIf="!administrador">
+  <b style="background:red;">No eres admin</b>
+</div>-->
+
+<!--If else con ng template
+<div *ngIf="administrador; else noAdmin">
+  <button (click)="cambiar(false)">Cambiar</button>
+  <b style="background:yellow;">Eres admin</b>
+</div>
+
+<ng-template #noAdmin>
+    <button (click)="cambiar(true)">Cambiar</button>
+    <b style="background:red;">No eres admin</b>
+</ng-template>-->
+
+
+<!--ng template-->
+<div *ngIf="administrador; then admin else noAdmin">
+  <ng-template #admin>
+      <button (click)="cambiar(true)">Cambiar</button>
+      <b style="background:red;">No eres admin</b>
+  </ng-template>
+
+  <ng-template #noAdmin>
+      <button (click)="cambiar(false)">Cambiar</button>
+      <b style="background:#fff;">No eres admin</b>
+  </ng-template>
+</div>

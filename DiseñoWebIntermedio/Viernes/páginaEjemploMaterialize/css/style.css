@@ -1,0 +1,50 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #f1f1f1;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+p{
+	text-align : justify;
+}
+
+.app{
+	height: 60%;
+	width: 60%;
+}
+
+.logo{
+	height: 65px;
+	width: 45%;
+}
+
+@media screen and (max-width: 600px) and (min-width: 0px) {
+	.logo{
+		height: 50px;
+		width: 80%;
+	}
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+.slogan{
+	text-shadow: 2px 2px 4px #000000;
+}
+
+span{
+	text-shadow: 2px 2px 4px #000000;
+}
+      

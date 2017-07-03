@@ -1,0 +1,43 @@
+<h2>{{titulo}}</h2>
+
+<h3>Listado de ropa</h3>
+
+<input type="text" [(ngModel)]="prenda">
+<br>
+<span *ngIf="prenda">La prenda a guardar es: <b>{{prenda}}</b></span>
+<br>
+<button (click)="guardarPrenda()">Añadir prenda</button>
+<ul>
+  <li *ngFor="let item of listadoRopa; let i = index">
+    {{item}}
+    <button (click)="eliminarPrenda(i)">Eliminar</button>
+  </li>
+</ul>
+
+<br>
+
+<!--Pipes (filtors))-->
+<p>{{fecha | date:'yyyy-MM-dd'}} </p>
+<p>{{fecha | date:'fullDate' | uppercase}} </p>
+<p>{{fecha | date:'fullDate' | lowercase}}</p>
+<p>{{'HoLA MuNDo' | lowercase}}</p>
+<p>{{3500 | currency:'USD':true:'1.5'}}</p>
+<p>{{3500 | currency:'EUR':true:'1.5'}}</p>
+<p>{{3500 | currency:'GBP':true:'1.5'}}</p>
+
+<!--Pipes personalizadas se necesita crear conversor.pipe.ts-->
+{{8 | conversor:10}}
+<!--Ejercicio: Pipes para prefijos-->
+
+
+
+
+
+
+
+
+
+
+
+
+
